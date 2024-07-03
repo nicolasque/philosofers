@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nquecedo <nquecedo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/03 08:38:19 by nquecedo          #+#    #+#             */
-/*   Updated: 2024/07/03 08:40:24 by nquecedo         ###   ########.fr       */
+/*   Created: 2023/12/12 16:54:50 by nquecedo          #+#    #+#             */
+/*   Updated: 2023/12/13 13:12:00 by nquecedo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdio.h"
+#include "libft.h"
 
-
-
-int main(int argc, char *argv[])
+int	ft_isalnum(int c)
 {
-    printf("HELLO WORLD");
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (1);
+	return (0);
 }

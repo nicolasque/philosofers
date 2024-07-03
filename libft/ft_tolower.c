@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nquecedo <nquecedo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/03 08:38:19 by nquecedo          #+#    #+#             */
-/*   Updated: 2024/07/03 08:40:24 by nquecedo         ###   ########.fr       */
+/*   Created: 2023/12/12 18:26:03 by nquecedo          #+#    #+#             */
+/*   Updated: 2023/12/15 14:11:09 by nquecedo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdio.h"
+#include "libft.h"
 
-
-
-int main(int argc, char *argv[])
+int	ft_tolower(int c)
 {
-    printf("HELLO WORLD");
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }

@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nquecedo <nquecedo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/03 08:38:19 by nquecedo          #+#    #+#             */
-/*   Updated: 2024/07/03 08:40:24 by nquecedo         ###   ########.fr       */
+/*   Created: 2023/12/12 18:26:14 by nquecedo          #+#    #+#             */
+/*   Updated: 2023/12/15 14:11:11 by nquecedo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdio.h"
+#include "libft.h"
 
-
-
-int main(int argc, char *argv[])
+int	ft_toupper(int c)
 {
-    printf("HELLO WORLD");
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }

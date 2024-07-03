@@ -1,20 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nquecedo <nquecedo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/03 08:38:19 by nquecedo          #+#    #+#             */
-/*   Updated: 2024/07/03 08:40:24 by nquecedo         ###   ########.fr       */
+/*   Created: 2023/12/18 13:53:23 by nquecedo          #+#    #+#             */
+/*   Updated: 2023/12/18 19:45:46 by nquecedo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdio.h"
+#include "libft.h"
 
-
-
-int main(int argc, char *argv[])
+void	ft_putnbr_fd(int n, int fd)
 {
-    printf("HELLO WORLD");
+	char	c;
+
+	if (n == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
+		return ;
+	}
+	if (n < 0)
+	{
+		write(fd, "-", 1);
+		n *= -1;
+	}
+	if (n >= 10)
+		ft_putnbr_fd((n / 10), fd);
+	c = n % 10 + '0';
+	write(fd, &c, 1);
 }
+
+// int main()
+// {
+// 	ft_putnbr_fd(-2147483648, 1);
+// 	return 0;
+// }

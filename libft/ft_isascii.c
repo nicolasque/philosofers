@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nquecedo <nquecedo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/03 08:38:19 by nquecedo          #+#    #+#             */
-/*   Updated: 2024/07/03 08:40:24 by nquecedo         ###   ########.fr       */
+/*   Created: 2023/12/12 16:55:20 by nquecedo          #+#    #+#             */
+/*   Updated: 2023/12/15 14:10:43 by nquecedo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdio.h"
+#include "libft.h"
 
-
-
-int main(int argc, char *argv[])
+int	ft_isascii(int c)
 {
-    printf("HELLO WORLD");
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }

@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nquecedo <nquecedo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/03 08:38:19 by nquecedo          #+#    #+#             */
-/*   Updated: 2024/07/03 08:40:24 by nquecedo         ###   ########.fr       */
+/*   Created: 2023/12/19 12:24:56 by nquecedo          #+#    #+#             */
+/*   Updated: 2023/12/19 17:33:12 by nquecedo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdio.h"
+#include "libft.h"
 
+/**
+ * ft_lstlast - Returns the last element of the list.
+ * @lst: The address of a pointer to the first link of a list.
+ *
+ * Return: Last element of the list. NULL if the list is empty.
+ */
 
-
-int main(int argc, char *argv[])
+t_list	*ft_lstlast(t_list *lst)
 {
-    printf("HELLO WORLD");
+	if (lst == NULL)
+		return (NULL);
+	while (lst->next != NULL)
+	{
+		lst = lst->next;
+	}
+	return (lst);
 }
